@@ -1,0 +1,40 @@
+/*This CODE will generate an array with all prime numbers up to the one you call.
+Call it as primo(n), been "n" the top number you like to search for prime.
+NOTE : higher the number, more time and computing power is needed.
+
+*/
+function primo(n) {
+
+var p=[];
+var x;
+var y;
+ 
+  if (n%2==0) {n=n-1;}
+
+  for (x=0; x<n; n--) {
+	
+   // console.log(n); //verify external loop
+	
+	for (y=2;y<=n-1;y++) {
+	var p1 =false;	
+		
+		//console.log("LI, Verificando... "+n+","+y); //verify internal loop
+		if (n%y==0) {
+		//	console.log(" This cant be a Prime Number");
+			break;
+		} else {
+		//	console.log(n+" Searching for another divider...");
+			p1=true;
+		} 
+	  }	if (p1==true) {p.push(n)};
+   } 
+
+p.reverse();
+return p;
+
+//if you want to export this array as a text file, uncomment next lines
+
+//Rafael Arvelo Copyrigth @
+
+};
+
